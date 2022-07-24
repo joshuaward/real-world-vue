@@ -1,9 +1,9 @@
-<template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+<template lang="pug">
+nav
+	router-link(:to="{ name: 'EventList' }") Events
+	span  | 
+	router-link(:to="{ name: 'About' }") About
+router-view
 </template>
 
 <style lang="scss">
@@ -27,4 +27,6 @@ nav {
     }
   }
 }
+
+
 </style>
